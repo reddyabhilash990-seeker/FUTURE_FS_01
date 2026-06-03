@@ -31,8 +31,8 @@ export function Contact() {
           >
             {[
               { Icon: Mail, label: "Email", value: PROFILE.email, href: `mailto:${PROFILE.email}` },
-              { Icon: Github, label: "GitHub", value: "@abhilashreddy", href: PROFILE.github },
-              { Icon: Linkedin, label: "LinkedIn", value: "Abhilash Reddy", href: PROFILE.linkedin },
+              { Icon: Github, label: "GitHub", value: "@reddyabhilash990-seeker", href: PROFILE.github },
+              { Icon: Linkedin, label: "LinkedIn", value: "Gangireddy Abhilash Reddy", href: PROFILE.linkedin },
             ].map(({ Icon, label, value, href }) => (
               <a
                 key={label}
