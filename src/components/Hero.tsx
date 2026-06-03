@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronDown, FileText, Github, Linkedin, Mail } from "lucide-react";
-import profile from "@/assets/profile.jpg";
+import astronaut from "@/assets/astronaut.png";
 import { PROFILE } from "@/lib/portfolio-data";
+import { StarsBackdrop } from "./StarsBackdrop";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -16,9 +17,11 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-hero-glow overflow-hidden pt-28 pb-16"
+      className="relative min-h-screen flex items-center bg-space overflow-hidden pt-28 pb-16"
     >
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.1fr_1fr] gap-16 items-center w-full">
+      <StarsBackdrop />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.1fr_1fr] gap-16 items-center w-full">
         <div>
           <motion.span
             variants={fadeUp} initial="hidden" animate="show" custom={0}
@@ -101,39 +104,45 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Profile visual */}
+        {/* Astronaut visual */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="relative mx-auto w-full max-w-md aspect-square"
         >
-          <div className="absolute inset-0 bg-gradient-primary blur-3xl opacity-30 rounded-full" />
-          <div className="absolute inset-6 rounded-3xl border border-primary/30" />
+          {/* Nebula glow */}
+          <div className="absolute inset-0 rounded-full bg-gradient-primary blur-3xl opacity-30" />
+          <div className="absolute inset-8 rounded-full border border-primary/20 animate-[spin_30s_linear_infinite]" />
+          <div className="absolute inset-16 rounded-full border border-accent/20 animate-[spin_22s_linear_infinite_reverse]" />
+
+          {/* Floating + slow rotation */}
           <motion.div
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative w-full h-full rounded-3xl overflow-hidden border border-border bg-card shadow-[0_20px_80px_-20px_oklch(0.70_0.18_245/0.5)]"
+            animate={{ y: [0, -18, 0], rotate: [-4, 4, -4] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            className="relative w-full h-full grid place-items-center"
           >
             <img
-              src={profile}
-              alt={PROFILE.name}
-              width={640} height={640}
-              className="w-full h-full object-cover"
+              src={astronaut}
+              alt="Floating astronaut illustration"
+              width={1024}
+              height={1024}
+              className="w-[88%] h-[88%] object-contain drop-shadow-[0_30px_60px_oklch(0.70_0.18_245/0.45)]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
           </motion.div>
+
+          {/* Floating tech chips */}
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-2 right-2 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-medium backdrop-blur"
+            className="absolute -top-2 right-2 px-3 py-1.5 rounded-full bg-card/70 border border-border text-xs font-medium backdrop-blur"
           >
             <span className="text-primary">&lt;dev&gt;</span> React
           </motion.div>
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-4 -left-2 px-3 py-1.5 rounded-full bg-card border border-border text-xs font-medium backdrop-blur"
+            className="absolute bottom-4 -left-2 px-3 py-1.5 rounded-full bg-card/70 border border-border text-xs font-medium backdrop-blur"
           >
             Tailwind
           </motion.div>
@@ -143,7 +152,7 @@ export function Hero() {
       <motion.button
         onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
+        className="absolute z-10 bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
       >
         Scroll down
         <motion.span

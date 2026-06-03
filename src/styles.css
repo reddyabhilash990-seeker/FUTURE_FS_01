@@ -81,4 +81,12 @@ html {
     radial-gradient(ellipse 50% 40% at 10% 70%, oklch(0.82 0.15 200 / 0.15), transparent 60%);
 }
 
+/* Deep space background for hero */
+.bg-space {
+  background:
+    radial-gradient(ellipse at 20% 10%, oklch(0.22 0.06 280 / 0.9), transparent 55%),
+    radial-gradient(ellipse at 85% 80%, oklch(0.20 0.08 230 / 0.9), transparent 55%),
+    linear-gradient(180deg, oklch(0.10 0.03 260), oklch(0.08 0.02 250));
+}
+
 .scrollbar-none::-webkit-scrollbar { display: none; }
