@@ -9,9 +9,10 @@ export const PROFILE = {
   tagline: "Aspiring Web Developer",
   intro:
     "I am a Computer Science student passionate about web development and modern technologies. I enjoy building responsive and interactive web applications while continuously improving my development skills and learning new technologies.",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
-  email: "abhilash@example.com",
+  github: "https://github.com/reddyabhilash990-seeker",
+  linkedin:
+    "https://www.linkedin.com/in/gangireddy-abhilash-reddy-a381a4391?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  email: "reddyabhilash990@gmail.com",
   resumeUrl: "#",
 };
 
@@ -34,8 +35,8 @@ export const PROJECTS = [
       "Interactive chatbot with a responsive chat interface built using React and JavaScript.",
     image: chatbot,
     tags: ["React", "JavaScript", "CSS"],
-    live: "#",
-    repo: "#",
+    live: "https://chatbot-ohan-p1n9mpnhc-reddyabhilash990-seekers-projects.vercel.app/",
+    repo: "https://github.com/reddyabhilash990-seeker",
   },
   {
     title: "Calculator App",
@@ -43,8 +44,8 @@ export const PROJECTS = [
       "Modern calculator handling arithmetic operations with a clean, minimal UI built in React.",
     image: calculator,
     tags: ["React", "JavaScript", "CSS"],
-    live: "#",
-    repo: "#",
+    live: "https://reddyabhilash990-seeker.github.io/calculator-/",
+    repo: "https://github.com/reddyabhilash990-seeker/calculator-",
   },
   {
     title: "Todo App",
@@ -52,8 +53,8 @@ export const PROJECTS = [
       "Task manager to add, edit, delete and complete tasks with a fully responsive interface.",
     image: todo,
     tags: ["React", "JavaScript", "Tailwind"],
-    live: "#",
-    repo: "#",
+    live: "https://reddyabhilash990-seeker.github.io/todo-app/",
+    repo: "https://github.com/reddyabhilash990-seeker/todo-app",
   },
 ];
 
