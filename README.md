@@ -4,7 +4,7 @@ A modern and responsive developer portfolio built with React, TypeScript, Tailwi
 
 ## 🌐 Live Demo
 
-[Portfolio Website](https://abhilash-portfolio.lovable.app)
+[Portfolio Website](https://abhilash-portofolio.lovable.app)
 
 ## ✨ Features
 
