@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useActiveSection(ids: string[], offset = 120) {
+export function useActiveSection(ids, offset = 120) {
   const [active, setActive] = useState(ids[0]);
 
   useEffect(() => {

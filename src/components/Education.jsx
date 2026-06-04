@@ -32,7 +32,6 @@ export function Education() {
         />
 
         <div className="relative mt-4">
-          {/* Timeline line */}
           <div className="absolute left-5 md:left-1/2 top-2 bottom-2 w-px bg-gradient-to-b from-transparent via-primary/40 to-transparent md:-translate-x-1/2" />
 
           <div className="space-y-12 md:space-y-16">
@@ -47,7 +46,6 @@ export function Education() {
                   transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                   className="relative md:grid md:grid-cols-2 md:gap-16 md:items-start"
                 >
-                  {/* Dot */}
                   <span className="absolute left-5 md:left-1/2 top-7 w-3.5 h-3.5 rounded-full bg-gradient-primary -translate-x-1/2 ring-4 ring-background shadow-[0_0_0_4px_oklch(0.28_0.03_250/0.4)] glow" />
 
                   <div

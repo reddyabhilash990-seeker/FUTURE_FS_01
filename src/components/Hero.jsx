@@ -10,7 +10,7 @@ const fadeUp = {
   show: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] },
   }),
 };
 
@@ -109,7 +109,6 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Astronaut visual */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -117,12 +116,10 @@ export function Hero() {
           className="relative mx-auto w-full max-w-md aspect-square will-change-transform"
           style={astroStyle}
         >
-          {/* Nebula glow */}
           <div className="absolute inset-0 rounded-full bg-gradient-primary blur-3xl opacity-30" />
           <div className="absolute inset-8 rounded-full border border-primary/20 animate-[spin_30s_linear_infinite]" />
           <div className="absolute inset-16 rounded-full border border-accent/20 animate-[spin_22s_linear_infinite_reverse]" />
 
-          {/* Floating + slow rotation */}
           <motion.div
             animate={{ y: [0, -18, 0], rotate: [-4, 4, -4] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
@@ -137,7 +134,6 @@ export function Hero() {
             />
           </motion.div>
 
-          {/* Floating tech chips */}
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
