@@ -15,6 +15,10 @@ const fadeUp = {
 };
 
 export function Hero() {
+  const { mx, my, sy, reduced } = useParallax();
+  const astroStyle = reduced
+    ? undefined
+    : { transform: `translate3d(${mx * -22}px, ${my * -22 + sy * -0.05}px, 0)` };
   return (
     <section
       id="home"
