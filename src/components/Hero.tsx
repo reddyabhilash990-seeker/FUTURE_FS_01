@@ -3,6 +3,7 @@ import { ArrowUpRight, ChevronDown, FileText, Github, Linkedin, Mail } from "luc
 import astronaut from "@/assets/astronaut.png";
 import { PROFILE } from "@/lib/portfolio-data";
 import { StarsBackdrop } from "./StarsBackdrop";
+import { useParallax } from "@/hooks/use-parallax";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
