@@ -1,13 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { Education } from "@/components/Education";
-import { Skills } from "@/components/Skills";
-import { Projects } from "@/components/Projects";
-import { Contact } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
-import { ScrollToTop } from "@/components/ScrollToTop";
+import App from "@/App.jsx";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,21 +10,5 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Computer Science student building responsive, interactive web applications." },
     ],
   }),
-  component: Index,
+  component: App,
 });
-
-function Index() {
-  return (
-    <main className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-      <ScrollToTop />
-    </main>
-  );
-}

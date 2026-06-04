@@ -1,14 +1,6 @@
 import { motion } from "framer-motion";
 
-export function SectionHeading({
-  eyebrow,
-  title,
-  description,
-}: {
-  eyebrow?: string;
-  title: string;
-  description?: string;
-}) {
+export function SectionHeading({ eyebrow, title, description }) {
   return (
     <div className="text-center max-w-2xl mx-auto mb-16">
       {eyebrow && (

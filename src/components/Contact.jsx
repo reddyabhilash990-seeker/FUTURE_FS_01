@@ -6,7 +6,7 @@ import { PROFILE } from "@/lib/portfolio-data";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     setSent(true);
     setTimeout(() => setSent(false), 3000);

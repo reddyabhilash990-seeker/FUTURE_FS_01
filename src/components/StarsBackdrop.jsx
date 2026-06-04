@@ -2,10 +2,7 @@ import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { useParallax } from "@/hooks/use-parallax";
 
-type Star = { x: number; y: number; size: number; delay: number; duration: number; depth: number };
-type Particle = { x: number; y: number; size: number; duration: number; delay: number; drift: number; depth: number };
-
-function rand(seed: number) {
+function rand(seed) {
   const x = Math.sin(seed) * 10000;
   return x - Math.floor(x);
 }
@@ -13,7 +10,7 @@ function rand(seed: number) {
 export function StarsBackdrop() {
   const { mx, my, sy, reduced } = useParallax();
 
-  const stars = useMemo<Star[]>(() => {
+  const stars = useMemo(() => {
     return Array.from({ length: 90 }, (_, i) => ({
       x: rand(i + 1) * 100,
       y: rand(i + 50) * 100,
@@ -24,7 +21,7 @@ export function StarsBackdrop() {
     }));
   }, []);
 
-  const particles = useMemo<Particle[]>(() => {
+  const particles = useMemo(() => {
     return Array.from({ length: 14 }, (_, i) => ({
       x: rand(i + 200) * 100,
       y: rand(i + 300) * 100,
@@ -36,8 +33,7 @@ export function StarsBackdrop() {
     }));
   }, []);
 
-  // Layer translations driven by mouse + scroll
-  const layer = (depth: number) => {
+  const layer = (depth) => {
     if (reduced) return { transform: "none" };
     const tx = mx * depth * 18;
     const ty = my * depth * 18 + sy * depth * 0.08;
@@ -46,14 +42,12 @@ export function StarsBackdrop() {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Nebula gradient blobs (deepest) */}
       <div style={layer(0.4)} className="absolute inset-0 will-change-transform">
         <div className="absolute -top-32 -right-20 w-[36rem] h-[36rem] rounded-full bg-[radial-gradient(circle,oklch(0.70_0.22_290/0.35),transparent_60%)] blur-3xl" />
         <div className="absolute top-1/3 -left-32 w-[34rem] h-[34rem] rounded-full bg-[radial-gradient(circle,oklch(0.75_0.18_220/0.30),transparent_60%)] blur-3xl" />
         <div className="absolute -bottom-40 left-1/3 w-[40rem] h-[40rem] rounded-full bg-[radial-gradient(circle,oklch(0.65_0.20_320/0.25),transparent_60%)] blur-3xl" />
       </div>
 
-      {/* Glowing stars */}
       <div className="absolute inset-0 will-change-transform" style={layer(0.6)}>
         {stars.map((s, i) => (
           <motion.span
@@ -72,7 +66,6 @@ export function StarsBackdrop() {
         ))}
       </div>
 
-      {/* Floating particles (foreground, most parallax) */}
       <div className="absolute inset-0 will-change-transform" style={layer(1.4)}>
         {particles.map((p, i) => (
           <motion.span

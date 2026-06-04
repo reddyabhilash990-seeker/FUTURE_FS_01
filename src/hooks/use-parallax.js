@@ -20,7 +20,7 @@ export function useParallax() {
     if (reduced) return;
     let raf = 0;
     let mx = 0, my = 0, sy = 0;
-    const onMove = (e: MouseEvent) => {
+    const onMove = (e) => {
       mx = (e.clientX / window.innerWidth - 0.5) * 2;
       my = (e.clientY / window.innerHeight - 0.5) * 2;
       schedule();
