@@ -44,7 +44,7 @@ export function Hero() {
             variants={fadeUp} initial="hidden" animate="show" custom={2}
             className="mt-6 text-xl md:text-2xl font-semibold"
           >
-            Aspiring <span className="text-primary">{PROFILE.role}</span>
+            <span className="text-primary">{PROFILE.role}</span>
           </motion.p>
 
           <motion.p
