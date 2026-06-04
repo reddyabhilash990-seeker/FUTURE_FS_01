@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Abhilash Reddy Portfolio" },
+      { name: "description", content: "Computer Science Student passionate about React, Web Development and modern web applications." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Abhilash Reddy Portfolio" },
+      { property: "og:description", content: "Computer Science Student passionate about React, Web Development and modern web applications." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Abhilash Reddy Portfolio" },
+      { name: "twitter:description", content: "Computer Science Student passionate about React, Web Development and modern web applications." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/af023d78-3d07-4ae9-b966-a61f913a0d8b/id-preview-4eeb72b7--59647329-bebb-4341-9713-d6a92793356d.lovable.app-1780556076396.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/af023d78-3d07-4ae9-b966-a61f913a0d8b/id-preview-4eeb72b7--59647329-bebb-4341-9713-d6a92793356d.lovable.app-1780556076396.png" },
     ],
     links: [
       {
