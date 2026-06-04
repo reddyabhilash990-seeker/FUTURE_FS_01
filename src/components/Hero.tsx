@@ -114,7 +114,8 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-md aspect-square"
+          className="relative mx-auto w-full max-w-md aspect-square will-change-transform"
+          style={astroStyle}
         >
           {/* Nebula glow */}
           <div className="absolute inset-0 rounded-full bg-gradient-primary blur-3xl opacity-30" />
