@@ -3,6 +3,7 @@ import { ArrowUpRight, ChevronDown, FileText, Github, Linkedin, Mail } from "luc
 import astronaut from "@/assets/astronaut.png";
 import { PROFILE } from "@/lib/portfolio-data";
 import { StarsBackdrop } from "./StarsBackdrop";
+import { useParallax } from "@/hooks/use-parallax";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -14,6 +15,10 @@ const fadeUp = {
 };
 
 export function Hero() {
+  const { mx, my, sy, reduced } = useParallax();
+  const astroStyle = reduced
+    ? undefined
+    : { transform: `translate3d(${mx * -22}px, ${my * -22 + sy * -0.05}px, 0)` };
   return (
     <section
       id="home"
@@ -109,7 +114,8 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-md aspect-square"
+          className="relative mx-auto w-full max-w-md aspect-square will-change-transform"
+          style={astroStyle}
         >
           {/* Nebula glow */}
           <div className="absolute inset-0 rounded-full bg-gradient-primary blur-3xl opacity-30" />
