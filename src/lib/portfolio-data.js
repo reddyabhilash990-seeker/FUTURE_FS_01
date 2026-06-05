@@ -17,15 +17,14 @@ export const PROFILE = {
 };
 
 export const SKILLS = [
-  { name: "HTML", level: 90, icon: "Code2", color: "#e34f26" },
-  { name: "CSS", level: 88, icon: "Palette", color: "#1572b6" },
-  { name: "JavaScript", level: 82, icon: "Braces", color: "#f7df1e" },
-  { name: "React", level: 80, icon: "Atom", color: "#61dafb" },
-  { name: "Tailwind CSS", level: 85, icon: "Wind", color: "#38bdf8" },
-  { name: "Git", level: 78, icon: "GitBranch", color: "#f05032" },
-  { name: "GitHub", level: 80, icon: "Github", color: "#ffffff" },
-  { name: "Vite", level: 75, icon: "Zap", color: "#a855f7" },
-  { name: "ESLint", level: 70, icon: "ShieldCheck", color: "#4b32c3" },
+  { name: "HTML", icon: "Code2", color: "#e34f26" },
+  { name: "CSS", icon: "Palette", color: "#1572b6" },
+  { name: "JavaScript", icon: "Braces", color: "#f7df1e" },
+  { name: "Java", icon: "Coffee", color: "#f89820" },
+  { name: "React", icon: "Atom", color: "#61dafb" },
+  { name: "Tailwind CSS", icon: "Wind", color: "#38bdf8" },
+  { name: "Git", icon: "GitBranch", color: "#f05032" },
+  { name: "GitHub", icon: "Github", color: "#ffffff" },
 ];
 
 export const PROJECTS = [
